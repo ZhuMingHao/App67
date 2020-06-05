@@ -31,5 +31,16 @@ namespace App67
             base.OnNavigatedTo(e);
             MainPage.MyAppBarButton.IsEnabled = false;
         }
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            base.OnNavigatedFrom(e);
+            MainPage.MyAppBarButton.IsEnabled = true;
+        }
+       
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(TestPage));
+        }
     }
 }
