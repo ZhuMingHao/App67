@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="App67.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App67"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <CommandBar Grid.Row="0" DefaultLabelPosition="Right" x:Name="MyCommandBar">
+            <CommandBar.Content>
+                <Button
+                    Name="BackButton"
+                    VerticalAlignment="Top"
+                   
+                    Style="{StaticResource NavigationBackButtonNormalStyle}"
+                    />
+            </CommandBar.Content>
+
+            <AppBarButton
+                x:Name="TestAppBar"
+                Icon="Mail"
+                Label="Information sur le produit"
+                />
+            <AppBarButton Icon="Mail" Label="Avis sur les produits" />
+            <AppBarButton Icon="Mail" Label="Informations de contact" />
+        </CommandBar>
+        <Frame Name="MyFrame" Grid.Row="1">
+
+        </Frame>
+    </Grid>
+</Page>
